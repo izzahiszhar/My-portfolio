@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Izzah | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+function filterProjects(category, event) {
+
+    const projects = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    projects.forEach(project => {
+
+        if (category === 'all') {
+            project.style.display = "block";
+        } 
+        else if (project.classList.contains(category)) {
+            project.style.display = "block";
+        } 
+        else {
+            project.style.display = "none";
+        }
+
+    });
+}
+</script>
+<nav>
+    <h2>Izzah.</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    
+    <!-- Background Image -->
+    <div class="hero-bg"></div>
+
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+        <h1>Hi, I'm <span>Nurul Izzah</span></h1>
+        <p>
+            Game Developer & Multimedia Computing student passionate about 
+            interactive systems, 3D modelling and modern web development.
+        </p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+
+</section>
+
+<section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+        Final year Bachelor of Computer Science (Hons.) Multimedia Computing student at UiTM Jasin,
+        specializing in game development, interactive systems and UI/UX design.
+        I enjoy combining creativity and programming to build engaging digital experiences.
+    </p>
+</section>
+
+<section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill-box"><b>Programming:</b><br>C++, C#, Java, Python, SQL, PHP, HTML, CSS, JavaScript</div>
+        <div class="skill-box"><b>Game Tools:</b><br>Unity, Construct 3, Android Studio</div>
+        <div class="skill-box"><b>3D Tools:</b><br>Blender, 3Ds Max</div>
+        <div class="skill-box"><b>Design:</b><br>Photoshop, Illustrator, Animate, Canva</div>
+    </div>
+
+    <div class="languages">
+        <h2>Languages</h2> 
+        <ul style="margin:0.5rem 0 0 1rem; padding:0;"> 
+            <li>Bahasa Melayu <span style="color:gray;">(Native)</span></li> 
+            <li>English <span style="color:gray;">(Intermediate)</span></li> 
+        </ul>
+    </div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="project-tabs">
+        <button class="tab-btn active" onclick="filterProjects('all', event)">All</button>
+        <button class="tab-btn" onclick="filterProjects('game', event)">Game Dev</button>
+        <button class="tab-btn" onclick="filterProjects('model', event)">3D Modelling</button>
+        <button class="tab-btn" onclick="filterProjects('web', event)">Web Dev</button>
+        <button class="tab-btn" onclick="filterProjects('design', event)">Designing</button>
+    </div>
+
+    <div class="projects-grid">
+
+        <!-- GAME PROJECT -->
+        <div class="project-card game">
+            <div class="project-image">
+                <img src="img/img fyp.png" alt="Explore You">
+            </div>
+            <h3>FYP – Explore You: Gamification in Exploring Unique Personality Test for Teens</h3>
+            <p>Developed an interactive personality test game using Unity, incorporating gamification 
+                elements to make the experience engaging while helping users explore their personality and self-awareness.</p>
+            <div class="project-links">
+                <a href="img/Poster fyp.png" target="_blank">📄 Poster</a>
+                <a href="https://youtu.be/Me8jrdeajb8" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+        <div class="project-card game">
+            <div class="project-image">
+                <img src="img/game1.png" alt="Explore You">
+            </div>
+            <h3>Find Your Treasure</h3>
+            <p>Developed an individual treasure hunt game using Construct 3 for CSC684 – Game Programming at UiTM. 
+                The player’s objective is to find the treasure box and collect all the gold. Player must shoot skulls to survive and avoid bombs.</p>
+            <div class="project-links">
+                <a href="https://storied-elf-e74131.netlify.app/" target="_blank">🎮 Play</a>
+                <a href="https://youtu.be/xhRAiJseIv4" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+        <div class="project-card game">
+            <div class="project-image">
+                <img src="img/game2.png" alt="Explore You">
+            </div>
+            <h3>Lost in The Woods</h3>
+            <p>Created an individual 3-level mini-game, Lost in the Woods, using Construct 3. Learned to implement character animations for smooth walking and movement.</p>
+            <div class="project-links">
+                <a href="https://lost-ulala.netlify.app/" target="_blank">🎮 Play</a>
+                <a href="https://youtu.be/dMsRYcpzJv8" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+         <div class="project-card game">
+            <div class="project-image">
+                <img src="img/game3.png" alt="Explore You">
+            </div>
+            <h3>Waves of War</h3>
+            <p>Created Waves of War, an individual mini-game developed in Construct 3. Implemented enemy enemy AI movement using trigonometric and vector-based movement. Players must survive enemy attacks and reach the island safely.</p>
+            <div class="project-links">
+                <a href="https://wavesofwar.netlify.app/" target="_blank">🎮 Play</a>
+                <a href="https://youtu.be/GwP5UIbrD_M" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+        <div class="project-card game">
+            <div class="project-image">
+                <img src="img/game4.png" alt="Explore You">
+            </div>
+            <h3>Water Guardian, Heroes of Tomorrow</h3>
+            <p>Contributed to the design and development of Water Guardians, a group-based educational game created using Construct 3. The project aims to raise awareness about water security by educating players on water conservation, 
+                sustainability, and responsible usage through interactive gameplay.</p>
+            <div class="project-links">
+                <a href="https://youtu.be/NPJ45jfp9hQ" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+        <div class="project-card game">
+            <div class="project-image">
+                <img src="img/game5.png" alt="Explore You">
+            </div>
+            <h3>Symphony Shop Simulation Virtual Reality(VR) Project</h3>
+            <p>Developed an interactive VR music instrument shop using Unity, allowing users to browse music instrument, cart system, and simulated checkout.</p>
+            <div class="project-links">
+                <a href="https://youtu.be/lfM4B3UMmTo" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+
+        <!-- WEB PROJECT -->
+        <div class="project-card web">
+            <div class="project-image">
+                <img src="img/HOMEKINDLAND.png" alt="Hotel System">
+            </div>
+            <h3>Hotel Management System</h3>
+            <p>This project showcases the development of a dynamic website homepage, a collaborative effort built using Eclipse. The site's backend was powered by Servlet and JSP,
+                with PHPMyAdmin managing the database. For the front-end, we utilized standard web technologies: HTML for structure, CSS for styling, and JavaScript for interactivity.
+                This project was a foundational experience in full-stack web development.</p>
+            <div class="project-links">
+                <a href="file/REPORT KINGLAND.pdf" target="_blank">📄 User manual</a>
+            </div>    
+        </div>
+
+        <div class="project-card web">
+            <div class="project-image">
+                <img src="img/hirecshp.png" alt="Hotel System">
+            </div>
+            <h3>Hirecs</h3>
+            <p>This is the homepage for a group project that focused on front-end design and interface. We developed it using Notepad, leveraging HTML, CSS, and JavaScript 
+                to create a visually driven website with a dummy dataset.</p>
+            <div class="project-links">
+                <a href="file/Hirecs.pdf" target="_blank">📄 User manual</a>
+            </div>    
+        </div>
+
+        <!-- 3D PROJECT -->
+        <div class="project-card model">
+            <div class="project-image">
+                <img src="img/arcade.png" alt="3D Model">
+            </div>
+            <h3>Arcade Machine</h3>
+            <p>Created using Blender with detailed texturing and lighting.</p>
+        </div>
+
+        <div class="project-card model">
+            <div class="project-image">
+                <img src="img/barrel.png" alt="3D Model">
+            </div>
+            <h3>Barrel using 3ds Max</h3>
+            <p>Created using 3ds Max with detailed texturing and lighting.</p>
+        </div>
+
+          <div class="project-card model">
+            <div class="project-image">
+                <img src="img/electric.png" alt="3D Model">
+            </div>
+            <h3>Electric Transformer</h3>
+            <p>Created using 3ds Max with detailed texturing and lighting.</p>
+        </div>
+        
+        <div class="project-card model">
+            <div class="project-image">
+                <img src="img/ice.png" alt="3D Model">
+            </div>
+            <h3>Ice Cream Stall</h3>
+            <p>Created using Blender with detailed texturing and lighting.</p>
+        </div>
+
+          <div class="project-card model">
+            <div class="project-image">
+                <img src="img/lampu.png" alt="3D Model">
+            </div>
+            <h3>Street Light </h3>
+            <p>Created using 3ds Max with detailed texturing and lighting.</p>
+        </div>
+
+         <div class="project-card model">
+            <div class="project-image">
+                <img src="img/mush.png" alt="3D Model">
+            </div>
+            <h3>Mushroom house</h3>
+            <p>Created using 3ds Max with detailed texturing and lighting.</p>
+        </div>
+
+         <div class="project-card model">
+            <div class="project-image">
+                <img src="img/npc.png" alt="3D Model">
+            </div>
+            <h3>My NPC in FYP</h3>
+            <p>Created using 3ds Max with detailed texturing and lighting.</p>
+              <div class="project-links">
+                <a href="https://youtu.be/ASyG1wAAin4" target="_blank">🎥 Animation</a>
+            </div>
+        </div>
+
+         <div class="project-card model">
+            <div class="project-image">
+                <img src="img/sampah.png" alt="3D Model">
+            </div>
+            <h3>Street Garbage</h3>
+            <p>Created using 3ds Max with detailed texturing and lighting.</p>
+        </div>
+
+        <div class="project-card model">
+            <div class="project-image">
+                <img src="img/trumpet.png" alt="3D Model">
+            </div>
+            <h3>Trumpet</h3>
+            <p>Created using 3ds Max with detailed texturing and lighting.</p>
+            <div class="project-links">
+                <a href="https://youtu.be/J1Z4M9AWqMI" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+        <div class="project-card model">
+            <div class="project-image">
+                <img src="img/tv.png" alt="3D Model">
+            </div>
+            <h3>Television</h3>
+            <p>Created using Blender with detailed texturing and lighting.</p>
+        </div>
+
+         <div class="project-card model">
+            <div class="project-image">
+                <img src="img/whiteboard.png" alt="3D Model">
+            </div>
+            <h3>Whiteboard</h3>
+            <p>Created using Blender with detailed texturing and lighting.</p>
+        </div>
+        
+        <div class="project-card model">
+            <div class="project-image">
+                <img src="img/cactus.png" alt="3D Model">
+            </div>
+            <h3>Cactus</h3>
+            <p>Created using Blender with detailed texturing and lighting.</p>
+            <div class="project-links">
+                <a href="https://youtu.be/TnP8Alvxmss" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+        
+        <div class="project-card model">
+            <div class="project-image">
+                <img src="img/house side.png" alt="3D Model">
+            </div>
+            <h3>3D Dream House Modeling</h3>
+            <p>This is a 3D model of my dream house, brought to life using 3ds Max. Developed as part of a Virtual Reality (VR) 
+                assignment, it highlights my skills in architectural visualization and 3D environment creation.</p>
+            <div class="project-links">
+                <a href="file/house report.pdf" target="_blank">📄 Report</a>
+            </div>
+        </div>
+
+
+         <!-- DESIGNING -->
+        <div class="project-card design">
+            <div class="project-image">
+                <img src="img/Pertandingan Menghias Pulut Kuning.png" alt="Designing">
+            </div>
+          <h3>Competition Poster</h3>
+            <p>Designed a promotional competition poster using Canva during my internship.</p>
+        </div>
+
+       <div class="project-card design">
+            <div class="project-image">
+                <img src="img/Pertandingan Menyediakan Cendol & Koktail Buah.png" alt="Designing">
+            </div>
+          <h3> Competition Poster</h3>
+            <p>Designed a promotional competition poster using Canva during my internship.</p>
+        </div>
+
+        <div class="project-card design">
+            <div class="project-image">
+                <img src="img/sada.png" alt="game">
+            </div>
+          <h3> Virtual Walkthrough</h3>
+            <p>Designed and developed an interactive Virtual Walkthrough in ICT Department using Unity to support corporate communication during my internship.</p>
+             <div class="project-links">
+                <a href="https://youtu.be/pj3ZnI_3gv8" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+         <div class="project-card design">
+            <div class="project-image">
+                <img src="img/intro vid.png" alt="Designing">
+            </div>
+          <h3>Book Launching Video</h3>
+            <p>Produced the official Strategic Digitalisation Plan 2025–2029 book launching video.Tools that use is capcut, canva and blender.</p>
+             <div class="project-links">
+                <a href="https://youtu.be/N5Q8224-Rgw" target="_blank">🎥 Demo</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+        <!-- Add more projects same format -->
+
+    </div>
+</section>
+
+<!-- ACHIEVEMENT -->
+<section id="achievements" data-aos="fade-up">
+    <h2>Achievements</h2>
+
+    <div class="achievement-card">
+        <div class="achievement-text">
+            <h4>Top Coders Malaysia 2024</h4>
+            <p>Participated in a duo competition (team of 2 players). Contributed to ideation, coding,
+                 and debugging while collaborating effectively under time constraints. The project was developed using Python.</p>
+            <div class="project-links">
+                <a href="img/sijil top coder.jpg" target="_blank">📄 Certifications</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-text">
+            <h4>Hackathon 2024</h4>
+            <p>Participated in a 3-person team competition, contributing to idea development, Python programming, 
+                and debugging. Demonstrated strong teamwork and problem-solving skills under tight time constraints.</p>
+            <div class="project-links">
+                <a href="img/hackathon.jpg" target="_blank">📄 Certifications</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-text">
+            <h4>GitLab Training Programme</h4>
+            <p>Completed a 3-day course on version control, repository management, and CI/CD basics.</p>
+             <div class="project-links">
+                <a href="img/sijil gitlab.jpg" target="_blank">📄 Certifications</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-text">
+            <h4>Adobe Photoshop</h4>
+            <p>Attended an Adobe Photoshop workshop at Kedah Digital Centre on 23 July 2019.</p>
+             <div class="project-links">
+                <a href="img/photoshop.jpg" target="_blank">📄 Certifications</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievement-card">
+        <div class="achievement-text">
+            <h4>Wondershare Filmora</h4>
+            <p>Attended an Wondershare Filmora workshop at Kedah Digital Centre on 24 July 2019.</p>
+             <div class="project-links">
+                <a href="img/filmora.jpg" target="_blank">📄 Certifications</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: nurulizzahiszhar@gmail.com</p>
+    <p>
+        Phone:
+        <a href="https://wa.me/60189493019" target="_blank">
+            +60 18-9493 019
+        </a>
+    </p>
+    <p>
+        Linkedin:
+        <a href="https://www.linkedin.com/in/nurul-izzah-iszhar-b65362357" target="_blank">
+            Nurul Izzah Iszhar
+        </a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2025 Nurul Izzah. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>

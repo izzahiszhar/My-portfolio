@@ -1,0 +1,360 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f7fc;
+    color: #2d2d2d;
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #de7bc8;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #de7bc8;
+}
+
+/* =========================
+   HERO - DARK 3D STYLE
+========================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 10% 0 10%;
+}
+
+/* Background image layer */
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("img/hero bg1.png") center/cover no-repeat;
+    filter: blur(8px) brightness(0.6);
+    transform: scale(1.1); /* Prevent blur edges */
+}
+
+/* Dark overlay */
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(10, 10, 20, 0.85),
+        rgba(20, 0, 30, 0.85)
+    );
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 700px;
+}
+
+/* Name highlight */
+.hero span {
+    color: #ff4fc3;
+    text-shadow: 0 0 20px rgba(255, 79, 195, 0.6);
+}
+
+/* Paragraph */
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Glowing Button */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(45deg, #ff4fc3, #de7bc8);
+    box-shadow: 0 0 20px rgba(255, 79, 195, 0.6);
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(255, 79, 195, 0.9);
+}
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 120px 10%;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    color: #de7bc8;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-box {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    background: #de7bc8;
+    color: white;
+}
+
+.languages {
+    margin-top: 40px;
+}
+
+.languages h3 {
+    margin-bottom: 10px;
+    color: #de7bc8;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(222,123,200,0.2);
+}
+
+/* Project Image */
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.project-image img {
+    width: 100%;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Project Links */
+
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    background: #de7bc8;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    background: #c858b0;
+}
+/* =========================
+   PROJECT TABS
+========================= */
+
+.project-tabs {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #f1effa;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.tab-btn:hover {
+    background: #de7bc8;
+    color: white;
+}
+
+.tab-btn.active {
+    background: #de7bc8;
+    color: white;
+}
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.achievements-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.achievement-card {
+    min-width: 300px;
+}
+/* =========================
+   CONTACT
+========================= */
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #de7bc8;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #f1effa;
+    color: #555;
+    margin-top: 60px;
+}
+
+/* =========================
+   VIDEO MODAL
+========================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 500px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
